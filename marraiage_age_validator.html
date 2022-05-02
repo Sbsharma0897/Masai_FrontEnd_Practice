@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .container
+    {
+        display:flex;
+        width:20%;
+        flex-direction: column;
+        margin-top: 30px;;
+    }
+    select,input
+    {
+        width:100%;
+        margin-top: 30px;;
+    }
+    .dob
+    {
+     display:flex;
+     width:100%;
+     gap:10px;
+     
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+   
+    <form >
+         <select name="" id="gender">
+             <option value="female">Female</option>
+             <option value="male">Male</option>
+         </select>
+         <div class="dob">
+             <input type="number" id="date"placeholder="date">  
+            <input type="number" id="month"placeholder="month">
+            <input type="number"id="year"placeholder="year">
+         </div>
+       
+        <input type="submit" value="Submit">
+    </form>
+</div>
+    
+</body>
+</html>
+
+<script>
+    document.querySelector("form").addEventListener("submit",result)
+
+    function result()
+    {
+        event.preventDefault();
+        var gender=document.querySelector("#gender").value
+        var date=document.querySelector("#date").value
+        var month=document.querySelector("#month").value
+        var year=document.querySelector("#year").value
+        if(gender=="male")
+        {
+           if(2022-year>=21)
+           {
+               alert("allowed")
+           }
+           else
+           {
+               alert("not allowed")
+           }
+        }
+        else
+        {
+            if(2022-year>=18)
+           {
+               alert("allowed")
+           }
+           else
+           {
+               alert("not allowed")
+           }
+        }
+
+    }
+</script>

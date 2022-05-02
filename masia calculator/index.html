@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *
+        {
+            margin:0px;
+            padding:0px;
+        }
+ 
+  body>h1
+  {
+      text-align:center;
+      font-size:40px;
+      color:green;
+      margin-top: 30px;
+  }
+  .box
+  {
+      width:15%;
+      height:auto;
+      display:block;
+      margin:auto;
+      margin-top:45px;
+      border:0px solid blue;
+      padding: 40px;
+      
+      display:block;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+ .box>div
+ {
+     
+     width:100%;
+     height:40px;
+    
+     margin:auto;
+     margin-bottom: 8px;
+     
+     border:0px solid yellow;
+     display:flex;
+     border-radius:5px;s
+     
+
+ }
+ .box>div>div
+ {
+  width:40px;
+  height:40px;
+  border:0px solid red;
+  margin:auto;
+  border-radius:5px ;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  
+ }
+ div>p
+ {
+     text-align: center;
+     margin-top:12px;
+     font-weight: bold;
+
+
+ }
+ .box>div:nth-child(1)
+ {
+     height:40px;
+     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+     margin-bottom:15px;
+ }
+ .box>div>div:nth-child(4)
+
+ {
+     background-color: black;
+     color:white;
+ }
+ 
+ .last>div:nth-child(1)
+ {
+     background-color: red;
+     color:white;
+ }
+ .last>div:nth-child(3)
+ {
+    background-color: black;
+     color:white;
+ }
+ .box>div>div:nth-child(1)
+ {
+     margin-left:0px;
+ }
+ .box>div>div:nth-child(4)
+ {
+     margin-right:0px;
+ }
+ #display
+ {
+     justify-content: center;;
+     display:flex;
+    align-items: center;;
+
+ }
+ 
+    </style>
+    
+</head>
+<body>
+    <h1>Masai Calculator</h1>
+    <div class="box">
+        <div id="display"></div>
+        <div>
+            <div>
+                <p>1</p>
+            </div>
+            <div>
+                <p>2</p>
+            </div>
+            <div>
+                <p>3</p>
+            </div>
+            <div>
+                <p>+</p>
+            </div>
+        </div>
+        <div>
+            <div>
+                <p>4</p>
+            </div>
+            <div>
+                <p>5</p>
+            </div>
+            <div>
+                <p>6</p>
+            </div>
+            <div>
+                <p>-</p>
+            </div>
+        </div>
+        <div>
+            <div>
+                <p>7</p>
+            </div>
+            <div>
+                <p>8</p>
+            </div>
+            <div>
+                <p>9</p>
+            </div>
+            <div>
+                <p>X</p>
+            </div>
+        </div>
+        <div class="last">
+            <div>
+                <p>C</p>
+            </div>
+            <div>
+                <p>0</p>
+            </div>
+            <div>
+                <p>=</p>
+            </div>
+            <div>
+                <p>/</p>
+            </div>
+        </div>
+
+
+    </div>
+    
+    
+</body>
+</html>
+
+<script>
+var bag="";
+var keys=document.querySelectorAll(".box>div>div")
+
+
+
+for(var i=0;i<keys.length;i++)
+{
+    keys[i].addEventListener("click",getnumber)
+}
+function getnumber()
+{
+   var x=event.target.innerText
+  
+   if(bag=="" && x=="=") 
+   {
+       return 0;
+   }
+   if(x=="C")
+   {
+       bag="";
+   }
+   else if(x=="=")
+   {
+       bag=eval(bag);
+   }
+   else 
+   {
+    bag=bag+x;
+   }
+   
+   
+   document.querySelector("#display").innerText=bag;
+}
+</script>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Values</title>
+</head>
+<body>
+	<input type="number"  id="age">
+   <button onclick="getage()"> submit</button>
+   <p id="result"> the answer is here</p>
+	
+</body>
+</html>
+
+<script type="text/javascript">
+	function getage() {
+		var age= document.getElementById("age").value
+		document.getElementById("result").innerText=age;
+	}
+
+	
+</script>

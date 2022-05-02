@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .container
+    {
+        display:flex;
+        width:20%;
+        flex-direction: column;
+        margin-top: 30px;;
+    }
+    select,input
+    {
+        width:100%;
+        margin-top: 30px;;
+    }
+    .dob
+    {
+     display:flex;
+     width:100%;
+     gap:10px;
+     
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+   
+    <form >
+        <input type="text" id="name" placeholder="name">  
+        <input type="number" id="age"placeholder="age">
+         <select name="" id="gender">
+             <option value="female">Female</option>
+             <option value="male">Male</option>
+          </select>
+        <input type="text" id="email"placeholder="email">
+        <input type="number" id="number"placeholder="number">
+         
+       
+         <input type="submit" value="Submit">
+    </form>
+</div>
+    
+</body>
+</html>
+
+<script>
+    var x=document.querySelector("form")
+    
+    x.addEventListener("submit",result)
+     
+    var array=[];
+    function result()
+    {
+        event.preventDefault();
+        var obj={};
+        var name=document.querySelector("#name").value
+        obj.name=name;
+        var age=document.querySelector("#age").value
+        obj.age=age;
+        var gender=document.querySelector("#gender").value
+        obj.gender=gender
+        var email=document.querySelector("#email").value
+        obj.email=email
+        var number=document.querySelector("#number").value
+        obj.number=number
+       array.push(obj);
+       
+
+    }
+    console.log(array);
+</script>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin:0px;
+            padding:0px;
+        }
+        .heading
+        {
+            text-align:center;
+            margin-top:25px;
+        }
+        .container
+        {
+            display:grid;
+            width:80%;
+            margin:auto;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: auto;
+            gap:20px;
+            margin-top: 20px;;
+        }
+        .container>div
+        {
+            
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
+            
+        }
+        img
+        {
+            width:100%;
+
+        }
+        h3
+        {
+         margin-top: 10px;
+         font-size:14px;
+         color:gray;
+         margin-left: 15px;;
+        }
+        
+        .flexbox
+        {
+            display:flex;
+            width:70%;
+            
+            margin-top:12px;
+            margin-left: 15px;;
+            margin-bottom: 15px;;
+            justify-content: space-between;
+            align-items: center;
+            /* border:1px solid red; */
+
+        }
+        .flexbox>h2
+        {
+            
+         font-size:18px;
+         color:black;
+         
+        }
+        .flexbox>p
+        {
+           color:gray; 
+         font-size:13px;
+         
+         
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1 class="heading">Stratgiv Investor</h1>
+    <div class="container">
+
+    </div>
+    
+</body>
+</html>
+
+<script>
+
+var obj = [
+    {
+        imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi1.jpg.pagespeed.ic.mkSk-Af1ka.webp",
+        name:"LATEST MEN’S SNEAKER",
+        price:"$25.00",
+        strikedOffPrice:"$95.00"
+    },{
+        imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi2.jpg.pagespeed.ic.uBrpABaJqp.webp",
+        name:"LATEST MEN’S SNEAKER",
+        price:"$35.00",
+        strikedOffPrice:"$100.00"
+    },{
+        imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi3.jpg.pagespeed.ic.iO_cFEPy2K.webp",
+        name:"LATEST MEN’S SNEAKER",
+        price:"$35.00",
+        strikedOffPrice:"$100.00"
+    },
+    {
+        imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi4.jpg.pagespeed.ic.kmiQW8I5wx.webp",
+        name:"LATEST MEN’S SNEAKER",
+        price:"$35.00",
+        strikedOffPrice:"$100.00"
+    }
+]
+
+obj.forEach(function(elem)
+{
+    var box=document.createElement("div")
+
+
+    var imgUrl=document.createElement("img")
+    imgUrl.setAttribute("src",elem.imgUrl) 
+    imgUrl.setAttribute("class","personpic")
+
+    var name=document.createElement("h3")
+     name.innerText=elem.name
+
+
+    var price=document.createElement("h2")
+    price.innerText=elem.price
+
+
+    var strikedOffPrice=document.createElement("p")
+    strikedOffPrice.innerText=elem.strikedOffPrice
+
+    var box1=document.createElement("div")
+     box1.setAttribute("class","flexbox")
+     box1.append(price,strikedOffPrice)
+
+    box.append(imgUrl,name,box1)
+    document.querySelector(".container").append(box)
+})
+
+</script>

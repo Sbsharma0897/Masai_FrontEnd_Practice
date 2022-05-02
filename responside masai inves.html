@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin:0px;
+            padding:0px;
+            box-sizing: border-box;
+        }
+        body>h1
+        {
+            font-weight: bold;
+            width:30%;
+            margin:auto;
+            text-align: center;
+            margin-top: 20px;;
+        }
+        .logos
+        {
+            display:grid;
+            margin:auto;
+            margin-top: 40px;;
+            width:100%;
+            /* border:1px solid red; */
+           
+            
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: auto;
+            grid-template-areas:
+            "bx1 bx2 bx3";
+            
+
+        }
+        .logos>div
+        {
+            /* border:1px solid blue; */
+        }
+        .logos>div:nth-child(1)
+        {
+            grid-area: bx1;
+        }
+        .logos>div:nth-child(1)
+        {
+            grid-area: bx2;
+        }
+        .logos>div:nth-child(1)
+        {
+            grid-area: bx3;
+        }
+        .logos>div>img
+        {
+            width:100%;
+        }
+        .logos+h1
+        {
+            margin-top:80px;
+      
+        }
+        .container
+        {
+            display:grid;
+            width:100%;
+            margin:auto;
+            margin-top: 40px;
+            padding:20px;
+            gap:20px;
+            /* border:1px solid black; */
+            grid-template-rows: repeat(3,auto);
+            grid-template-columns:repeat(4,1fr);
+            grid-template-areas:
+            "v k am sam"
+            "an bh fa anm"
+            "ak sa vi .";
+
+            
+
+        }
+        .container>div
+        {
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            /* border:1px solid red; */
+            border-radius: 15px;
+           text-align: center;
+            
+
+
+        }
+        .container>div:nth-child(1)
+        {
+           grid-area:v;
+        }
+        .container>div:nth-child(2)
+        {
+           grid-area:k;
+        }
+        .container>div:nth-child(3)
+        {
+           grid-area:am;
+        }
+        .container>div:nth-child(4)
+        {
+           grid-area:sam;
+        }
+        .container>div:nth-child(5)
+        {
+           grid-area:an;
+        }
+        .container>div:nth-child(6)
+        {
+           grid-area:bh;
+        }
+        .container>div:nth-child(7)
+        {
+           grid-area:fa;
+        }
+        .container>div:nth-child(8)
+        {
+           grid-area:anm;
+        }
+        .container>div:nth-child(9)
+        {
+           grid-area: ak;
+        }
+        .container>div:nth-child(10)
+        {
+           grid-area: sa;
+        }
+        .container>div:nth-child(11)
+        {
+           grid-area: vi;
+        }
+       .pic
+       {
+           width:100%;
+           border-top-left-radius: 15px;
+           border-top-right-radius: 15px;
+       }
+       h3
+       {
+           font-size:25px;
+           margin-top:10px;
+       }
+       .container>div>p
+       {
+           color:gray;
+           margin-top: 10px;
+           font-size: 20px;
+       }
+       p+img
+       {
+           width:50%;
+       }
+       @media all and (min-width:750px) and (max-width:1020px)
+       {
+        .container
+        {
+            
+            grid-template-rows: repeat(4,auto);
+            grid-template-columns:repeat(3,1fr);
+            grid-template-areas:
+            "v k am "
+            " sam an bh "
+            " fa anm ak "
+            "sa vi .";
+
+            
+
+        }
+
+       }
+       @media all and (min-width:90px) and (max-width:749px)
+       {
+        .container
+        {
+            
+            grid-template-rows: repeat(6,auto);
+            grid-template-columns:repeat(2,1fr);
+            grid-template-areas:
+            "v k "
+            "am sam "
+            "an bh"
+            " fa anm"
+            "ak sa "
+            "vi .";
+
+            
+
+        }
+        .logos
+        {
+            display:grid;
+            margin:auto;
+            margin-top: 40px;;
+            width:70%;
+            /* border:1px solid red; */
+           
+            
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows:repeat(3,auto);
+            grid-template-areas:
+            "bx1" 
+            "bx2 "
+            "bx3";
+
+       }
+
+
+
+    </style>
+</head>
+<body>
+    <h1>Board Members</h1>
+    <div class="logos">
+        <div>
+            <img  src="https://www.masaischool.com/img/our-investors/india-q-borderless.svg" alt="">
+        </div>
+        <div>
+            <img src="https://www.masaischool.com/img/our-investors/unitus-borderless.svg" alt="">
+
+        </div>
+        <div>
+            <img src="https://www.masaischool.com/img/our-investors/india-q-borderless.svg" alt="">
+
+        </div>
+    </div>
+    <h1>Strategic Investors</h1>
+    <div class="container">
+        <div>
+           
+            <img class="pic" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg" alt="">
+           <h3>Vijay Shekar</h3>
+           <p>Founder</p>
+           <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg" alt="">
+
+        </div>
+        <div>
+           
+            <img class="pic"  src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg" alt="">
+            <h3>Vijay Shekar</h3>
+            <p>Founder</p>
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg" alt="">
+
+        </div>
+        <div>
+            <img  class="pic" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg" alt="">
+            <h3>Vijay Shekar</h3>
+            <p>Founder</p>
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg" alt="">
+
+        </div>
+        <div>
+            <img  class="pic" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg" alt="">
+            <h3>Vijay Shekar</h3>
+            <p>Founder</p>
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg" alt="">
+
+        </div>
+        <div>
+            <img  class="pic" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg" alt="">
+            <h3>Vijay Shekar</h3>
+            <p>Founder</p>
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg" alt="">
+
+        </div>
+        <div>
+            <img  class="pic" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg" alt="">
+            <h3>Vijay Shekar</h3>
+            <p>Founder</p>
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg" alt="">
+
+        </div>
+        <div>
+            <img  class="pic" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg" alt="">
+            <h3>Vijay Shekar</h3>
+            <p>Founder</p>
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg" alt="">
+
+        </div>
+        <div>
+            <img  class="pic" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg" alt="">
+            <h3>Vijay Shekar</h3>
+           <p>Founder</p>
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg" alt="">
+
+        </div>
+        <div>
+            <img  class="pic" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg" alt="">
+            <h3>Vijay Shekar</h3>
+           <p>Founder</p>
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg" alt="">
+
+        </div>
+        <div>
+            <img  class="pic" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg" alt="">
+            <h3>Vijay Shekar</h3>
+            <p>Founder</p>
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg" alt="">
+
+        </div>
+        <div>
+            <img  class="pic" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg" alt="">
+            <h3>Vijay Shekar</h3>
+            <p>Founder</p>
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg" alt="">
+
+        </div>
+    </div>
+    
+</body>
+</html>

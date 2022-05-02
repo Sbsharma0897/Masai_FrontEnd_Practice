@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin:0px;
+            padding:0px;
+            box-sizing:border-box;
+        }
+        .container
+        {
+            width:100%;
+            background-color: rgb(216, 216, 233);
+            padding: 15px;;
+           
+        }
+        .container>h1
+        {
+           
+            text-align:center;
+        
+        }
+       .news
+       {
+           display:flex;
+           width:90%;
+           gap:3rem;
+         
+           margin: auto;
+           margin-top: 20px;;
+           flex-wrap: wrap;
+           /* border:1px solid red; */
+
+       }
+       .news>div
+       {
+           /* border: 1px solid blue; */
+           flex:1;
+           /* margin:20px; */
+           padding:15px;
+           background-color: white;
+           
+           border-radius: 15px;
+           box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+           
+       }
+       .news>div>img
+       {
+           width:100%;
+
+       }
+       .news>div>img+p
+       {
+           font-size:20px;
+           font-weight: bold;
+
+       }
+       button
+       {
+           margin-top: 20px;
+           display:flex;
+           margin:auto;
+           margin-top: 30px;;
+           padding:10px;
+           border:1px solid red;
+           border-radius: 3px;
+           background-color: red;
+       } 
+       .inves
+       {
+           
+           text-align:center;
+        margin-top: 50px;
+        ;
+       }
+       .logos
+       {
+           display:flex;
+           width:90%;
+           gap:2rem;
+           margin:auto;
+           margin-top:20px;
+           
+
+       }
+       .logos>div
+       {
+          border-radius: 5px;
+         
+        
+       }
+       .logos>div>img
+
+       {
+            width:100%;
+       }
+
+          
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Masai in the news</h1>
+        <div class="news">
+            <div>
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/ET_3754cc10ec.png" alt="">
+            <p>Edtech startup Masai School acquires data analytics firm Prepleaf for $1 million.</p>
+            <p>
+                With their latest acquisition, Masai moves one step closer to becoming India’s largest outcome driven institute with courses in Web Development, UI/UX design and now, Data Analytics.
+            </p>
+            </div>
+            <div>
+                <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/ET_3754cc10ec.png" alt="">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem corrupti nisi vit</p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias accusantium quis, aliquid 
+                </p>
+            </div>
+            <div>
+                <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/ET_3754cc10ec.png" alt="">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem corrupti nisi vit</p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias accusantium quis, aliquid
+                </p>
+            </div>
+        </div>
+       <button>See More</button>
+
+    </div>
+    <div class="inves"> <h1>Our Invsestors, Who belieuve us</h1></div>
+    <div class="logos">
+        <div>
+            <img src="https://www.masaischool.com/img/our-investors/unitus.svg" alt="">
+        </div>
+        <div>
+            <img src="https://www.masaischool.com/img/our-investors/unitus.svg" alt="">
+        </div>
+
+        <div>
+            <img src="https://www.masaischool.com/img/our-investors/unitus.svg" alt=""></div>
+
+    </div>
+    
+</body>
+</html>

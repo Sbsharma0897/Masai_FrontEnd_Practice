@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+       *
+       {
+           margin:0px;
+           padding:0px;
+       }
+
+        .heading
+        {
+            width:40%;
+            text-align: center;
+            margin:auto;
+            margin-top:20px;
+
+
+        }
+        .heading>p
+        {
+            color:gray;
+            margin-top: 10px;
+            line-height: 25px;;
+        }
+        .container
+        {
+            display:grid;
+            width:70%;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: 300px;
+            gap:30px;
+            grid-template-areas:
+            "bx1 bx2 bx3";
+            
+            margin:auto;
+            margin-top: 40px;
+        }
+        .container>div
+        {
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-radius: 15px;
+        }
+        .container>div:nth-child(1)
+        {
+          grid-area:bx1;
+        }
+        .container>div:nth-child(2)
+        {
+          grid-area:bx2;
+        }
+        .container>div:nth-child(3)
+        {
+          grid-area:bx3;
+        }
+        img{
+            width:100%;
+            height:100%;
+        }
+
+        @media all and (min-width:451px) and (max-width:750px)
+        {
+            .container
+        {
+            
+            width:100%;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(2,300px);
+            gap:20px;
+            grid-template-areas:
+            "bx1 bx2"
+            "bx3 .";
+            
+            margin:auto;
+            margin-top: 40px;
+
+        }
+        .heading
+        {
+            width:90%;
+            
+
+        }
+    }
+        @media all and (min-width:90px) and (max-width:450px)
+        {
+            .container
+        {
+            
+            width:100%;
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows:repeat(3,300px);
+            gap:10px;
+            grid-template-areas:
+            "bx1"
+            "bx2"
+            "bx3 ";
+            
+            margin:auto;
+            margin-top: 40px;
+
+        }
+        .heading
+        {
+            width:90%;
+            
+
+        }
+    }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="heading">
+        <h1>Choose a plan thats right for your Business</h1>
+        <p>We collect reviews from clients and provide it to customers so that it helps thme to choose the 
+            right company for work.
+        </p>
+    </div>
+    <div class="container">
+        <div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv24w6_RjB2tejzfhrCtNs0vTqnWT7jUo9yw&usqp=CAU" alt="">
+        </div>
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv24w6_RjB2tejzfhrCtNs0vTqnWT7jUo9yw&usqp=CAU" alt="">
+
+
+        </div>
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv24w6_RjB2tejzfhrCtNs0vTqnWT7jUo9yw&usqp=CAU" alt="">
+
+
+        </div>
+    </div>
+    
+</body>
+</html>

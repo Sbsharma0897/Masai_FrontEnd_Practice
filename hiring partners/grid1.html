@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .container
+        {
+            width:80%;
+            display: grid;
+            grid-template-rows: repeat(3,150px);
+            grid-template-columns: repeat(4,1fr);
+             grid-template-areas: 
+            "blu blu gr gr"
+             "pi sa sa sa"
+             "nan nan nan nan";
+            gap:25px;
+            margin:auto;
+            border:1px solid red;
+
+        }
+        .container>div
+        {
+            background-color: gray;
+
+        }
+        .container>div:nth-child(1)
+        {
+          grid-area: blu;
+         
+
+        }
+        .container>div:nth-child(2)
+        {
+          grid-area: gr;
+          
+        }.container>div:nth-child(3)
+        {
+          grid-area: pi;
+          
+        }.container>div:nth-child(4)
+        {
+          grid-area: sa;
+          
+        }.container>div:nth-child(5)
+        {
+          grid-area: nan;
+          
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      
+    </div>
+    
+</body>
+</html>

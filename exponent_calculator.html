@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+       *
+       {
+           margin:0px;
+           padding:0px;
+       }
+
+        .topbox
+        {
+            display:flex;
+            width:30%;;
+            height:50px;
+            margin:auto;
+            /* border:1px solid blue; */
+           
+            justify-content: space-between;
+
+
+
+
+        }
+        .heading
+        {
+            display:flex;
+            width:30%;
+            margin:auto;
+            /* border:1px solid blue; */
+           
+            justify-content: space-between;
+
+
+
+
+        }
+        .topbox>div
+        {   
+          
+         
+
+          /* border:1px solid green; */
+          text-align: center;;
+            
+        }
+        .heading>div
+        {
+           
+            font-size:20px;
+            width:30%;
+            text-align:center;
+            /* border:1px solid red; */
+        }
+        #bt1
+        {
+           display:block;
+
+            margin:auto;
+        }
+        #bt2
+        {
+           display:block;
+
+            margin:auto;
+            margin-top: 20px;;
+        }
+        p
+        {
+           
+            
+            text-align: center;;
+            margin-top: 20px;
+        }
+
+       
+
+
+       
+
+
+    </style>
+</head>
+<body>
+    <div class="topbox">
+        <div>
+        <input type="number" id="a">
+        </div>
+        <div >
+            <input type="number" id="b">
+        </div>
+    </div>
+    <div class="heading">
+        <div>A </div>
+        <div>B</div>
+    </div>
+    <button id="bt1"> SUBMIT</button>
+    <button id="bt2"> Click here to find the exponent!</button>
+    <p>Here is result</p>
+   
+
+    
+</body>
+</html>
+
+
+
+<script>
+    document.querySelector("#bt1").addEventListener("click",findproduct)
+    function findproduct()
+    {
+        var a=document.querySelector("#a").value
+        var b=document.querySelector("#b").value
+       var z=a*b;
+       alert(z);
+    }
+    document.querySelector("#bt2").addEventListener("click",findexpo)
+    function findexpo()
+    {
+        var a=document.querySelector("#a").value
+        var b=document.querySelector("#b").value
+        var res=1;
+        for(var i=1;i<=b;i++)
+        {
+            res=res*a;
+        }
+        document.querySelector("p").innerText=res;
+    }
+  
+
+</script>

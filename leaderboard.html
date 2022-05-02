@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+       *
+       {
+           margin:0px;
+           padding:0px;
+       }
+
+        .topbox
+        {
+            display:flex;
+            width:30%;
+            height:50px;
+            margin:auto;
+           
+            justify-content: space-between;
+
+
+
+
+        }
+        .heading
+        {
+            display:flex;
+            width:30%;
+            margin:auto;
+           
+            justify-content: space-between;
+
+
+
+
+        }
+        .topbox>div
+        {   
+            width:30%;
+           
+            background-color: green;
+            
+        }
+        .heading>div
+        {
+           
+            font-size:20px;
+            width:30%;
+            text-align:center;
+        }
+       
+        .container
+        {
+            display:grid;
+           width:80%;
+            margin:auto;
+            grid-template-columns: repeat(3,50px);
+            grid-template-rows: 80px 50px 50px 50px 50px 50px;
+            gap:20px;
+            justify-content: center;;
+            grid-template-areas: 
+            "dis dis dis "
+            "bx2 bx3 bx4"
+            "bx5 bx6 bx7"
+            "bx8 bx9 bx10"
+            ". bx11 ."
+            "bx12 bx12 bx12";
+           
+            color:white;
+            
+           
+            
+          
+        }
+        .container>div
+        {
+            border:1px solid black;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex:1;
+        }
+        .container>.display
+        {
+         grid-area:dis;
+         background-color: gray;;
+        }
+       
+        .container>div:nth-child(2)
+        {
+          grid-area:bx2;
+          background-color:orange;
+         
+        }
+        .container>div:nth-child(3)
+        {
+          grid-area:bx3;
+          background-color: green;
+        }
+        .container>div:nth-child(4)
+        {
+          grid-area:bx4;
+          background-color:orange;
+        }
+        .container>div:nth-child(5)
+        {
+          grid-area:bx5;
+          background-color:orange;
+        }
+        .container>div:nth-child(6)
+        {
+          grid-area:bx6;
+          background-color:orange;
+        }
+        .container>div:nth-child(7)
+        {
+          grid-area:bx7;
+          background-color:orange;
+        }
+        .container>div:nth-child(8)
+        {
+          grid-area:bx8;
+          background-color:orange;
+        }
+        .container>div:nth-child(9)
+        {
+          grid-area:bx9;
+          background-color: green;
+        }
+        .container>div:nth-child(10)
+        {
+          grid-area:bx10;
+          background-color:orange;
+        }
+        .container>div:nth-child(11)
+        {
+          grid-area:bx11;
+          background-color: green;
+        }
+        .container>div:nth-child(12)
+        {
+          grid-area:bx12;
+          background-color: purple;
+        }
+        .container>div:nth-child(12)
+        {
+          grid-area:bx12;
+          background-color: black;
+        }
+        p
+        {
+            
+            width:50%;
+            margin:auto;
+            text-align: center;
+            font-size:25px;
+            margin-top: 80px;;
+        }
+       
+
+       
+
+
+    </style>
+</head>
+<body>
+    <div class="topbox">
+        <div id="min"></div>
+        <div id="max"></div>
+    </div>
+    <div class="heading">
+        <div>MIN </div>
+        <div>MAX</div>
+    </div>
+    <p>SCORE</p>
+    <div class="container">
+        <div class="display"></div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>0</div>
+        <div>ENTER</div>
+    </div>
+    
+</body>
+</html>
+
+
+<script>
+    var bag="";
+
+var key=document.querySelector(".container")
+var min=0;
+var max=0;
+
+
+  key.addEventListener("click",getnumber)
+   
+
+function getnumber()
+{
+  
+    var x=event.target.innerText;
+    var min=document.querySelector("#min").innerText;
+    var max=document.querySelector("#max").innerText;
+    if(x=="ENTER")
+    {
+      
+      if(Number(bag)>min && Number(bag)>max)
+      {
+        document.querySelector("#max").innerText=bag;
+      }
+      else
+      {
+        document.querySelector("#min").innerText=bag; 
+      }
+      bag="";
+
+    }
+    else 
+    {
+        bag=bag+x;
+    }
+    
+    document.querySelector(".display").innerText=bag;
+    
+    
+    
+}
+</script>

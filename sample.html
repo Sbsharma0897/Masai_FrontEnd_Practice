@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .container
+        {
+            display:grid;
+            width:80%;
+            margin:auto;
+            gap:20px;
+            border:1px solid black;
+            grid-template-rows: 200px;
+            grid-template-columns:repeat(4,1fr);
+            grid-template-areas:
+            "v k am sam"
+            
+        }
+        .container>div
+        {
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            border:1px solid red;
+            border-radius: 15px;
+            
+
+
+        }
+        .container>div:nth-child(1)
+        {
+           grid-area:v;
+        }
+        .container>div:nth-child(2)
+        {
+           grid-area:k;
+        }
+        .container>div:nth-child(3)
+        {
+           grid-area:am;
+        }
+        .container>div:nth-child(4)
+        {
+           grid-area:sam;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        </div>
+
+    
+</body>
+</html>
